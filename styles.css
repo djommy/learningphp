@@ -75,3 +75,14 @@ border-top:1px solid #ccc;
 #footer p {
 padding:10px;
 }
+
+
+
+.noAccount {
+	color: red;
+	width: 280px;
+	height: auto;
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+}

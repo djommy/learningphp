@@ -3,6 +3,7 @@
 <head>
 	<title>The best website EVER!!!</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="jquery/functions.js"></script>
 </head>
 <body>
 	<div id="wrapper">
