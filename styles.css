@@ -21,6 +21,7 @@ margin:0 auto;
 margin-bottom:25px;
 border-bottom:1px solid #ccc;
 border-top:1px solid #ccc;
+text-align: center;
 }
 
 #header h2 {
@@ -31,6 +32,7 @@ padding:10px;
 width:960px;
 height:40px;
 border-bottom:1px solid #ccc;
+text-align: center;
 }
 
 #nav a {
