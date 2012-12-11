@@ -12,16 +12,7 @@
 		
 		<?php include('includes/nav.php'); ?>
 
-
-		<?php 
-			session_start();
-			if (isset($_SESSION['firstname'])) {
-				$user = $_SESSION['firstname'];
-				echo "Ovo znaci da radi session";
-			}
-		?>
-
-		<div class="login noAccount"><?php if (!empty($_POST)) {
+		<div class="login noAccount"> <?php if (!empty($_POST)) {
 				$q = mysql_query("SELECT * FROM `new_user` WHERE `user_name`='" . $_POST['firstname'] . "' AND `user_password`='" . $_POST['pwd'] . "';");
 				$username = $_POST['firstname'];
 				if(mysql_num_rows($q) > 0){
