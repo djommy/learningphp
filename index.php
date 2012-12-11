@@ -4,32 +4,32 @@
 	<title>The best website EVER!!!</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="jquery/functions.js"></script>
+	<?php include_once('connection.php'); ?>
 </head>
-<body>
-	<div id="wrapper">
+
+<div id="wrapper">
 		<?php include('includes/header.php'); ?>
 		
-		<?php include('includes/nav.php'); ?>
-	
-		
+		<?php// include('includes/nav.php'); ?>
+
+		<div class="login noAccount"> <?php if (!empty($_POST)) {
+				$q = mysql_query("SELECT * FROM `new_user` WHERE `user_name`='" . $_POST['firstname'] . "' AND `user_password`='" . $_POST['pwd'] . "';");
+				$username = $_POST['firstname'];
+				if(mysql_num_rows($q) > 0){
+					die('welcome ' . $username . ' please ' . '<a href="home.php">continue</a>');
+				} else {
+					echo "You don't have an account, please go die now!!!!";
+				}
+			} ?></div>
 		<div id="content">
-			<h1>Hello fellow alien</h1>
-			<h2>Read why this is good for your teeth!!!</h2>
-			
-			<h3>Paragraph Element</h3>
-			<p>Johnny was playing outside when he really had to go to the bathroom. He runs in and his grandma was about to take a shower. He looks at her crotch and says, Whats that? She says, Well, it's a beaver, Johnny.
-The next day the same thing happens, only his mom is taking the shower. He says, Mom I know what that is. It's a beaver, but I think grandma's is dead because it's tongue is hanging out.</p>
-
-			<p>If I said you had a pronounced sloping brow, would you hold it against me?</p>
-
-			<p>Q: How many Northern Californians does it take to screw in a lightbulb? A: Hella.</p>
-		</div><!--end content-->
-		
-		<?php include('includes/sidebar.php'); ?>
-		
-		<?php include('includes/footer.php'); ?>
-		
-	
-	</div><!--end wrapper-->
+			<h2>Login</h2>
+			<form action="" method="POST">
+				User name: <input type="text" name="firstname"><br>
+				Password: <input type="password" name="pwd"><br>
+				<input class="submit" type="submit" value="Login">
+			</form>
+			<p>If you don't have an account please <a href="signup.php">sign up</a></p>
+		</div><!-- end content -->
+</div> <!--end wrapper-->
 </body>
 </html>
