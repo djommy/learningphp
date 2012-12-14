@@ -20,7 +20,7 @@
 			$recipient = "nikoladzonivojvodic@gmail.com";
 			$subject = $_POST['subject'];
 			$mailheader = "From: $email \r\n";
-			mail($recipient, $subject, $mailheader) or die("ERROR MADAFAKA!!!");
+			mail($recipient, $subject, $mailheader, $message) or die("ERROR MADAFAKA!!!");
 			echo "Thank You!";
 		 ?>
 		<div id="content">
