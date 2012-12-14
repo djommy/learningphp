@@ -28,7 +28,10 @@
 				Password: <input type="password" name="pwd"><br>
 				<input class="submit" type="submit" value="Login">
 			</form>
-			<p>If you don't have an account please <a href="signup.php">sign up</a></p>
+			<p>
+				If you don't have an account please <a href="signup.php">sign up</a>
+				Forgot your <a href="">password?</a>
+			</p>
 		</div><!-- end content -->
 </div> <!--end wrapper-->
 </body>

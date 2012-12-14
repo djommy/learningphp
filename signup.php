@@ -17,11 +17,13 @@
 				User name: <input type="text" name="user"><br>
 				Password: <input type="password" name="pass"><br>
 				E-mail: <input type="email" name="email"><br>
+				Security question: <input type="text" name="question"><br>
+				Answer: <input type="text" name="answer"><br>
 				<input type="submit" value="Sign up">
 			</form>
 			<?php 
 			if (!empty($_POST)) {
-				$q = mysql_query("INSERT INTO `new_user` (`user_name`, `user_password`, `user_email`) VALUES ('" . $_POST['user'] . "', '" . $_POST['pass'] ."', '" . $_POST['email'] . "');"); 
+				$q = mysql_query("INSERT INTO `new_user` (`user_name`, `user_password`, `user_email`, `question`, `answer`) VALUES ('" . $_POST['user'] . "', '" . $_POST['pass'] ."', '" . $_POST['email'] . "', '" . $_POST['question'] ."', '" . $_POST['answer'] ."');"); 
 				if ( !mysql_error() ) {
 					echo "Welcome new user!!!";
 				}else {

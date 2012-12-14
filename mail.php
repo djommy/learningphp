@@ -20,19 +20,18 @@
 			$recipient = "nikoladzonivojvodic@gmail.com";
 			$subject = $_POST['subject'];
 			$mailheader = "From: $email \r\n";
-			mail($recipient, $subject, $mailheader, $message) or die("ERROR MADAFAKA!!!");
+			mail($recipient, $subject, $message, $mailheader) or die("ERROR MADAFAKA!!!");
 			echo "Thank You!";
 		 ?>
 		<div id="content">
 			<h2>Login</h2>
 			<form action="mail.php" method="POST">
-				Name: <input type="text" name="name"><br>
-				Email: <input type="email" name="email"><br>
-				Subject: <input type="text" name="subject"><br>
-				Message: <textarea name="message" rows="4" cols="50"></textarea><br>
+				Name: <input type="text" name="name"/><br>
+				Email: <input type="email" name="email"/><br>
+				Subject: <input type="text" name="subject"/><br>
+				Message: <input type="text" name="message"/><br>
 				<input type="submit" value="Send a message">
 			</form>
-			<!-- <p>If you don't have an account please <a href="signup.php">sign up</a></p> -->
 		</div><!--end content-->
 		
 
