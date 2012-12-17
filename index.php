@@ -30,7 +30,7 @@
 			</form>
 			<p>
 				If you don't have an account please <a href="signup.php">sign up</a>
-				Forgot your <a href="">password?</a>
+				Forgot your <a href="retrive-password.php">password?</a>
 			</p>
 		</div><!-- end content -->
 </div> <!--end wrapper-->

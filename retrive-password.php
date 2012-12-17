@@ -12,14 +12,24 @@
 </header>
 <body>
 	<?php 
-		$q = mysql_query("SELECT `user_name`, AND `user_password` FROM `learning`");
-		$user = $_GET['username'];
-		if ($q == $user) {
-			echo $user;
-		};
+		$querry = ("SELECT `user_password` FROM `new_user` WHERE `user_name`='". $_POST['username'] ."'");
+		$result = mysql_query($querry);
+		if (!$result) {
+			echo " nesto nije u redu sa ($querry) iz baze: " . mysql_error(); 
+		}
+
+		if (mysql_num_rows($result) == 0) {
+			echo "You madafaka didn't enter the username that's in my nigga base!!!";
+		}
 	 ?>
-	<form action="retrive-password.php" method="GET">
+	<form action="retrive-password.php" method="POST">
 		Username<input type="text" name="username"><br>
 		<input type="submit" value="Get your password">
 	</form>
+
+	<?php 
+		while ($row = mysql_fetch_assoc($result)) {
+			echo "Your shitty password is: " . $row['user_password'];
+		}
+	 ?>
 </body>
