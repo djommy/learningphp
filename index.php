@@ -8,10 +8,10 @@
 </head>
 
 <div id="wrapper">
-		<?php include('includes/header.php'); ?>
+		<?php //include('includes/header.php'); ?>
 		
 		<?php// include('includes/nav.php'); ?>
-
+		
 		<div class="login noAccount"> <?php if (!empty($_POST)) {
 				$q = mysql_query("SELECT * FROM `new_user` WHERE `user_name`='" . $_POST['firstname'] . "' AND `user_password`='" . $_POST['pwd'] . "';");
 				$username = $_POST['firstname'];
@@ -20,19 +20,30 @@
 				} else {
 					echo "You don't have an account, please go die now!!!!";
 				}
-			} ?></div>
+			} ?>
+		</div>
 		<div id="content">
 			<h2>Login</h2>
 			<form action="" method="POST">
-				User name: <input type="text" name="firstname"><br>
-				Password: <input type="password" name="pwd"><br>
+				User name: <input type="text" name="firstname" required="required"><br>
+				Password: <input type="password" name="pwd" required="required"><br>
 				<input class="submit" type="submit" value="Login">
 			</form>
 			<p>
-				If you don't have an account please <a href="signup.php">sign up</a>
-				Forgot your <a href="retrive-password.php">password?</a>
+				If you don't have an account please <a href="signup.php">sign up</a><br>
+				Forgot your <a href="retrive-password.php">password?</a> You stupid fuck!
 			</p>
 		</div><!-- end content -->
+
+		<?php 
+
+		$a = 2;
+		$b = 3;
+		$c = 4;
+		$x = $a + $b * ($c + $b) / $b % 2;
+		echo $x;
+
+		?>
 </div> <!--end wrapper-->
 </body>
 </html>

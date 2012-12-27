@@ -32,4 +32,7 @@
 			echo "Your shitty password is: " . $row['user_password'];
 		}
 	 ?>
+	 <p>
+	 	Now go <a href="index.php">back</a> and do shit right this time.
+	 </p>
 </body>

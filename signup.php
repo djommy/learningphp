@@ -7,18 +7,16 @@
 </head>
 <body>
 	<div id="wrapper">
-		<?php include('includes/header.php'); ?>
-		
-		<?php include('includes/nav.php'); ?>
-	
-		
+		<?php include('variables/variables.php'); ?>
+		<h2><?php echo $signup ?></h2>
+
 		<div id="content">
 			<form action="" method="POST">
-				User name: <input type="text" name="user"><br>
-				Password: <input type="password" name="pass"><br>
+				User name: <input type="text" name="user" required="required"><br>
+				Password: <input type="password" name="pass" required="required"><br>
 				E-mail: <input type="email" name="email"><br>
-				Security question: <input type="text" name="question"><br>
-				Answer: <input type="text" name="answer"><br>
+				Security question: <input type="text" name="question" required="required"><br>
+				Answer: <input type="text" name="answer" required="required"><br>
 				<input type="submit" value="Sign up">
 			</form>
 			<?php 
@@ -32,8 +30,6 @@
 			}
 			?>
 		</div><!--end content-->
-		
-		<?php include('includes/sidebar.php'); ?>
 		
 		<?php include('includes/footer.php'); ?>
 		
