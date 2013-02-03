@@ -23,7 +23,7 @@
 			if (!empty($_POST)) {
 				$q = mysql_query("INSERT INTO `new_user` (`user_name`, `user_password`, `user_email`, `question`, `answer`) VALUES ('" . $_POST['user'] . "', '" . $_POST['pass'] ."', '" . $_POST['email'] . "', '" . $_POST['question'] ."', '" . $_POST['answer'] ."');"); 
 				if ( !mysql_error() ) {
-					echo "Welcome new user!!!";
+					echo "Welcome " . $_POST['user'] . " please " . "<a href='home.php'>continue</a>";
 				}else {
 					echo("There has been an error: " . mysql_error());
 				}

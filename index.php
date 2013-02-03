@@ -23,6 +23,10 @@
 			} ?>
 		</div>
 		<div id="content">
+			<?php include ('includes/welcome.php'); ?>
+			<div class="welcome">
+				<?php echo $welcomeMessage; ?>
+			</div>
 			<h2>Login</h2>
 			<form action="" method="POST">
 				User name: <input type="text" name="firstname" required="required"><br>
@@ -34,16 +38,6 @@
 				Forgot your <a href="retrive-password.php">password?</a> You stupid fuck!
 			</p>
 		</div><!-- end content -->
-
-		<?php 
-
-		$a = 2;
-		$b = 3;
-		$c = 4;
-		$x = $a + $b * ($c + $b) / $b % 2;
-		echo $x;
-
-		?>
 </div> <!--end wrapper-->
 </body>
 </html>
