@@ -24,8 +24,9 @@
 		</div>
 		<div id="content">
 			<?php include ('includes/welcome.php'); ?>
+			<?php include ('includes/jovana.php') ?>
 			<div class="welcome">
-				<?php echo $welcomeMessage; ?>
+				<?php echo $welcomeMessage . $jovana ;?>
 			</div>
 			<h2>Login</h2>
 			<form action="" method="POST">
